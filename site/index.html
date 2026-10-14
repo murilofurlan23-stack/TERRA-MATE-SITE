@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a cultura da erva-mate, sua história e produtos artesanais.">
+
+  <title>Erva-Mate | Tradição, cultura e sabor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <canvas id="folhas" aria-hidden="true"></canvas>
+  <div id="progresso"></div>
+
+  <nav id="menu">
+    <a href="#inicio" class="logo">🌿 Erva-Mate</a>
+
+    <button id="burger" aria-label="Abrir menu">☰</button>
+
+    <div class="links">
+      <a href="#inicio">Início</a>
+      <a href="#especie">Espécie</a>
+      <a href="#tempo">História</a>
+      <a href="#manuseio">Produção</a>
+      <a href="#consumo">Consumo</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#receita">Receita</a>
+      <a href="#custo">Custos</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#mural">Mural</a>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="cuia" aria-hidden="true">
+      <div class="cuia-corpo"></div>
+      <div class="bomba"></div>
+    </div>
+
+    <h1 id="titulo">A importância da erva-mate</h1>
+
+    <p>
+      Tradição que atravessa gerações, sabor que inspira
+      novas ideias. Explore a história da
+      <i>Ilex paraguariensis</i> e descubra produtos que
+      valorizam essa riqueza natural.
+    </p>
+
+    <a class="btn" href="#especie">
+      Conheça nossa história →
+    </a>
+
+    <div class="contador">
+      👀 <b id="visitas">—</b> visitas
+    </div>
+  </header>
+
+  <section id="especie" class="bloco">
+    <h2>A espécie</h2>
+
+    <div class="duas">
+      <p class="grande">
+        A erva-mate, <i>Ilex paraguariensis</i>, é uma árvore
+        nativa da América do Sul, encontrada naturalmente
+        em regiões do Brasil, Argentina e Paraguai.
+        Suas folhas são usadas tradicionalmente em bebidas
+        como chimarrão e tererê e também inspiram novos
+        produtos alimentícios.
+      </p>
+
+      <div class="mapa">
+        <button class="chip on" data-rio="Paraná">Rio Paraná</button>
+        <button class="chip" data-rio="Uruguai">Rio Uruguai</button>
+        <button class="chip" data-rio="Paraguai">Rio Paraguai</button>
+
+        <div id="rio-info" class="rio-info">
+          🌊 A erva-mate ocorre naturalmente em áreas das
+          bacias dos rios Paraná, Uruguai e Paraguai.
+        </div>
+
+        <small>🌳 Uma planta símbolo da cultura regional.</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="tempo" class="bloco escuro">
+    <h2>Linha do tempo</h2>
+
+    <div class="linha">
+      <article class="marco">
+        <span>🏹</span>
+        <h3>Povos indígenas</h3>
+        <p>
+          Povos originários, incluindo os Guarani, já utilizavam
+          a erva-mate muito antes da colonização europeia.
+        </p>
+      </article>
+
+      <article class="marco">
+        <span>⛵</span>
+        <h3>Colonização · séculos XVI–XIX</h3>
+        <p>
+          O consumo se difundiu e a coleta e o comércio
+          da erva-mate ganharam importância regional.
+        </p>
+      </article>
+
+      <article class="marco">
+        <span>🧉</span>
+        <h3>Dias atuais</h3>
+        <p>
+          Além do chimarrão e do tererê, a erva-mate inspira
+          bebidas, sobremesas e outras criações gastronômicas.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="manuseio" class="bloco">
+    <h2>Da colheita ao produto</h2>
+    <p class="sub">
+      Conheça as principais etapas tradicionais de processamento.
+    </p>
+
+    <div class="etapas">
+      <button class="etapa on" data-i="0">1 · Sapeco</button>
+      <button class="etapa" data-i="1">2 · Secagem</button>
+      <button class="etapa" data-i="2">3 · Cancheação</button>
+      <button class="etapa" data-i="3">4 · Transporte</button>
+    </div>
+
+    <div id="painel-etapa" class="painel"></div>
+  </section>
+
+  <section id="consumo" class="bloco marrom">
+    <h2>Uma tradição compartilhada</h2>
+
+    <p class="grande">
+      No chimarrão, a erva-mate seca e triturada é colocada
+      na cuia e recebe água quente. No tererê, geralmente
+      é utilizada água fria. A cuia tradicional pode ser feita
+      de porongo, enquanto a bomba costuma ser de metal.
+    </p>
+
+    <div class="cards3">
+      <div class="carta">
+        <span>🧉</span>
+        <h3>Cuia</h3>
+        <p>Recipiente tradicional para preparar e compartilhar a bebida.</p>
+      </div>
+
+      <div class="carta">
+        <span>🥄</span>
+        <h3>Bomba</h3>
+        <p>Utensílio usado para beber sem ingerir as folhas.</p>
+      </div>
+
+      <div class="carta">
+        <span>🌿</span>
+        <h3>Folhas</h3>
+        <p>Secas e trituradas para preparar a infusão.</p>
+      </div>
+    </div>
+
+    <h3 class="ciclo-t">O ciclo da erva-mate</h3>
+
+    <div id="ciclo" class="ciclo">
+      <button>🌳 Árvore</button><i>→</i>
+      <button>✂️ Colheita</button><i>→</i>
+      <button>Sapeco</button><i>→</i>
+      <button>☀️ Secagem</button><i>→</i>
+      <button>⚙️ Cancheação</button><i>→</i>
+      <button>🧉 Consumo</button><i>→</i>
+      <button>🍨 Produtos</button>
+    </div>
+  </section>
+
+  <section id="produtos" class="bloco">
+    <h2>Produtos inspirados na erva-mate</h2>
+    <p class="sub">
+      Ideias gastronômicas que unem tradição e criatividade.
+      As fotos são ilustrativas.
+    </p>
+
+    <div class="cards4">
+      <article class="produto" data-cor="#2f6b3d">
+        <div class="img sorvete" role="img"
+             aria-label="Sorvete ilustrativo"></div>
+        <h3>Sorvete de erva-mate</h3>
+        <p>Cremoso, com hortelã e um toque cítrico.</p>
+      </article>
+
+      <article class="produto" data-cor="#795238">
+        <div class="img geleia" role="img"
+             aria-label="Geleia ilustrativa"></div>
+        <h3>Geleia de erva-mate</h3>
+        <p>Uma opção criativa para acompanhar pães e queijos.</p>
+      </article>
+
+      <article class="produto" data-cor="#a7c66b">
+        <div class="img mousse" role="img"
+             aria-label="Sobremesa ilustrativa"></div>
+        <h3>Mousse</h3>
+        <p>Textura leve com sabor marcante.</p>
+      </article>
+
+      <article class="produto" data-cor="#d8ad54">
+        <div class="img picole" role="img"
+             aria-label="Picolé ilustrativo"></div>
+        <h3>Picolé recheado</h3>
+        <p>Chocolate por fora e sorvete de erva-mate por dentro.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="receita" class="bloco escuro">
+    <h2>Sorvete de erva-mate com hortelã</h2>
+
+    <div class="duas">
+      <div>
+        <h3>Ingredientes</h3>
+
+        <div class="porcoes">
+          Porções:
+          <button data-x="0.5">½×</button>
+          <button data-x="1" class="on">1×</button>
+          <button data-x="2">2×</button>
+          <button data-x="3">3×</button>
+        </div>
+
+        <ul id="ingredientes" class="checklist"></ul>
+
+        <div class="barra">
+          <div id="barra-ing"></div>
+        </div>
+
+        <small id="txt-ing">0 ingredientes separados</small>
+      </div>
+
+      <div>
+        <h3>Modo de preparo</h3>
+        <ol id="preparo" class="passos"></ol>
+
+        <div class="timer">
+          <div id="tempo-timer">10:00</div>
+
+          <div>
+            <button data-min="10">10 min</button>
+            <button data-min="180">3 h</button>
+            <button data-min="300">5 h</button>
+          </div>
+
+          <button id="timer-go" class="btn peq">Iniciar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="custo" class="bloco">
+    <h2>Planejamento de investimento</h2>
+
+    <p class="grande">
+      Simule uma faixa de orçamento para estruturar uma
+      produção artesanal. Os valores abaixo são estimativas
+      ilustrativas; pesquise fornecedores, capacidade,
+      licenças e exigências sanitárias antes de investir.
+    </p>
+
+    <div class="invest">
+      <small>Faixa estimada de investimento inicial</small>
+      <div class="valor">R$ 55 mil – R$ 80 mil</div>
+    </div>
+
+    <label class="simula">
+      Seu orçamento:
+      <b id="orc-v">R$ 60 mil</b>
+      <input type="range" id="orc" min="30" max="100" value="60">
+    </label>
+
+    <div class="barra grande-barra">
+      <div id="orc-barra"></div>
+    </div>
+
+    <p id="orc-msg" class="nota"></p>
+  </section>
+
+  <section id="quiz" class="bloco marrom">
+    <h2>Quiz da erva-mate</h2>
+    <div id="quiz-box" class="painel"></div>
+
+    <h3>🏆 Ranking</h3>
+    <ol id="ranking" class="rank"></ol>
+  </section>
+
+  <section id="mural" class="bloco">
+    <h2>Mural de recados</h2>
+
+    <form id="form-recado" class="form">
+      <input id="r-nome" placeholder="Seu nome"
+             maxlength="30" required>
+
+      <input id="r-texto"
+             placeholder="Escreva uma mensagem sobre a erva-mate"
+             maxlength="200" required>
+
+      <button class="btn peq">Publicar</button>
+    </form>
+
+    <div id="recados" class="recados"></div>
+  </section>
+
+  <footer class="final">
+    <h2>Obrigado pela<br>sua atenção</h2>
+    <button class="btn" id="festa">🌿 Celebrar a tradição</button>
+  </footer>
+
+  <button id="topo" aria-label="Voltar ao topo">↑</button>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

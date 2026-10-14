@@ -1,0 +1,6 @@
+// Servidor opcional: node server.js | http://localhost:3000
+// As funções interativas do exemplo usam armazenamento local do navegador.
+const http=require('http'),fs=require('fs'),path=require('path');
+const PORT=process.env.PORT||3000,ROOT=__dirname;
+const MIME={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml'};
+http.createServer((req,res)=>{let pathname;try{pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname)}catch{res.writeHead(400);return res.end('Requisição inválida')};if(pathname==='/')pathname='/index.html';const file=path.resolve(ROOT,'.'+pathname);if(!file.startsWith(ROOT+path.sep)&&file!==path.join(ROOT,'index.html')){res.writeHead(403);return res.end('Acesso negado')};fs.readFile(file,(err,data)=>{if(err){res.writeHead(404,{'Content-Type':'text/plain; charset=utf-8'});return res.end('Arquivo não encontrado')};res.writeHead(200,{'Content-Type':MIME[path.extname(file)]||'application/octet-stream','X-Content-Type-Options':'nosniff'});res.end(data)})}).listen(PORT,()=>console.log(`Site disponível em http://localhost:${PORT}`));
